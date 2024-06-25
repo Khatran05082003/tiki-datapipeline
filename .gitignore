@@ -1,0 +1,38 @@
+# Ignore service account credentials
+service_account.json
+
+# Ignore node_modules folder (if using Node.js)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files created by editors
+*.swp
+*.swo
+*.tmp
+*~
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache files (if using Python)
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+.env.local
+
+# Ignore build output (if using a build tool)
+dist/
+build/
+
+# Ignore IDE-specific files (examples for various IDEs)
+# Visual Studio Code
+.vscode/
+# IntelliJ IDEA
+.idea/
+# Sublime Text
+*.sublime-workspace

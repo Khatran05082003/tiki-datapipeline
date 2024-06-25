@@ -1,0 +1,81 @@
+- schema:
+    fail:
+      when required column missing: 
+        - id
+        - name
+        - price
+        - day_ago_created
+        - all_time_quantity_sold
+        - current_seller
+        - categories
+      when wrong column type:
+        id: integer
+        sku: integer
+        name: string
+        type: string
+        short_description: string
+        price: integer
+        discount: integer
+        discount_rate: integer
+        rating_average: FLOAT64  
+        review_count: integer
+        review_text: string
+        inventory_status: string
+        inventory_type: string
+        is_fresh: BOOL  
+        day_ago_created: integer
+        all_time_quantity_sold: FLOAT64  
+        current_seller: string
+        stock_item: string
+        quantity_sold: string
+        categories: string
+    pass:
+      when column constraints satisfied:
+        id:
+          unique: true
+          not null: true
+        sku:
+          unique: true
+          not null: true
+        name:
+          not null: true
+          min_length: 1
+        type:
+          not null: true
+          allowed_values: ["physical", "digital"]
+        price:
+          not null: true
+          min: 0
+        discount:
+          min: 0
+          max: 100
+        discount_rate:
+          min: 0
+          max: 1
+        rating_average:
+          min: 0.0
+          max: 5.0
+        review_count:
+          min: 0
+        review_text:
+          min_length: 0
+        inventory_status:
+          allowed_values: ["in_stock", "out_of_stock", "pre_order"]
+        inventory_type:
+          allowed_values: ["regular", "back_order"]
+        is_fresh:
+          not null: true
+        day_ago_created:
+          min: 0
+        all_time_quantity_sold:
+          min: 0.0
+        current_seller:
+          not null: true
+          min_length: 1
+        stock_item:
+          min: 0
+        quantity_sold:
+          min: 0
+        categories:
+          not null: true
+          min_length: 1

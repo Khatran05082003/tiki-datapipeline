@@ -1,0 +1,15 @@
+data_source product:
+  type: bigquery
+  connection:
+    account_info_json_path: /home/kha_tran_0508/astro/service_account.json
+    auth_scopes:
+      - https://www.googleapis.com/auth/bigquery
+      - https://www.googleapis.com/auth/cloud-platform
+      - https://www.googleapis.com/auth/drive
+    project_id: 'dwproject-424604'
+    dataset: dataset
+
+soda_cloud:
+  host: cloud.us.soda.io
+  api_key_id: 41200a5f-ca0d-4178-904d-5ec45515f606
+  api_key_secret: A-aXffg-Ri-GLUJLpQ8W6xmBSkeJZIQI8r1mV5lu-JMFtPyGZKLGOQ
