@@ -19,7 +19,7 @@ Dự án này thực hiện quy trình tự động hóa cho việc crawl dữ l
    - Sử dụng script `file_to_bigquery.py` để load dữ liệu từ file CSV vào Google BigQuery.
 
 5. **Data Modeling Với DBT**:
-   - Sử dụng script `dbt_transform.py` để thực hiện data modeling theo dạng star schema trên Google BigQuery.
+   - Sử dụng `dbt_transform` để thực hiện data modeling theo dạng star schema trên Google BigQuery.
 
 6. **Tự Động Hóa Quy Trình Bằng Apache Airflow**:
    - Sử dụng Apache Airflow để tự động hóa toàn bộ quy trình trên với DAG `product_pipeline`.
@@ -142,14 +142,15 @@ Kiểm tra các bước đã chạy trong DAG để đảm bảo rằng dữ li�
 Dự án này cung cấp một quy trình tự động hóa hoàn chỉnh từ việc crawl dữ liệu, kiểm tra chất lượng dữ liệu, đến việc load và transform dữ liệu sử dụng các công cụ hiện đại như Airflow, Soda, BigQuery và DBT. Hy vọng rằng dự án này sẽ giúp bạn hiểu rõ hơn về cách xây dựng một data pipeline hoàn chỉnh và áp dụng vào các dự án thực tế.
 
 ## Demo
+**Model**
+![image](https://github.com/Khatran05082003/tiki-datapipeline/assets/102920168/fb0ddf2d-0418-4d97-89b9-c1b7343e4f42)
+
 **MongoDB**
 ![image](https://github.com/Khatran05082003/tiki-datapipeline/assets/102920168/c31a68c9-6216-4870-b4a4-d907c73140e5)
 
 **Google Bigquery**
 ![image](https://github.com/Khatran05082003/tiki-datapipeline/assets/102920168/e8305015-e47b-4e77-9a0a-a60c1b8e8c56)
 
-**Model**
-![image](https://github.com/Khatran05082003/tiki-datapipeline/assets/102920168/fb0ddf2d-0418-4d97-89b9-c1b7343e4f42)
 
 
 
